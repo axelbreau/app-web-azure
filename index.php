@@ -20,6 +20,18 @@
                 die('Erreur : ' .$conn->connect_error);
             }
             echo 'Connexion réussie';
+
+            //On prépare notre requête 
+            try{
+               $sql = "SELECT * FROM utilisateur";
+               $stmt = $conn->query($sql);
+               if($stmt === false){
+                  die("Erreur");
+               }
+                  
+            }catch (PDOException $e){
+               echo $e->getMessage();
+            }
         ?>
     </body>
 </html>
