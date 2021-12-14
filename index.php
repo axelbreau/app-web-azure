@@ -23,10 +23,9 @@
             echo 'Test'
             
             //On prépare notre requête 
-            $sql = "SELECT * FROM utilisateur";
+            $sql = $conn->query("select * from utilisateur");
             var_dump($sql);
-            $stmt = $conn->query($sql);
-            echo $stmt;
+            print_r($sql);
         ?>
     </body>
 </html>
