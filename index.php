@@ -22,16 +22,9 @@
             echo 'Connexion réussie';
 
             //On prépare notre requête 
-            try{
-               $sql = "SELECT * FROM utilisateur";
-               $stmt = $conn->query($sql);
-               if($stmt === false){
-                  die("Erreur");
-               }
-                  
-            }catch (PDOException $e){
-               echo $e->getMessage();
-            }
+            $sql = "SELECT * FROM utilisateur";
+            $stmt = $conn->query($sql);
+            echo $stmt;
         ?>
     </body>
 </html>
