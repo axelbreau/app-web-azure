@@ -23,5 +23,4 @@
    foreach ($user as $recipe) {
       echo $recipe['nom'];
    }
-   ?>
 ?>
