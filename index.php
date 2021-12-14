@@ -20,9 +20,11 @@
                 die('Erreur : ' .$conn->connect_error);
             }
             echo 'Connexion réussie';
-
+            echo 'Test'
+            
             //On prépare notre requête 
             $sql = "SELECT * FROM utilisateur";
+            var_dump($sql);
             $stmt = $conn->query($sql);
             echo $stmt;
         ?>
