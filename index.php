@@ -10,6 +10,7 @@
       die('Erreur : '.$e->getMessage());
    }
 
+   echo 'Connexion reussie';
    // Si tout va bien, on peut continuer
 
    // On récupère tout le contenu de la table utilisateur
@@ -20,10 +21,7 @@
 
    // On affiche chaque recette une à une
    foreach ($user as $recipe) {
-      <p>
-         <?php echo $recipe['author']; ?>
-      </p>
-   <?php
+      echo $recipe['nom'];
    }
    ?>
 ?>
